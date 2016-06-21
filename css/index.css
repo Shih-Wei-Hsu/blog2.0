@@ -1,129 +1,33 @@
-           *{   
-		    	margin: 0;
-		    	padding: 0;
-		    }
-		    html{
-		    	height: 658px;
-		    	background-image: url(img/bg3.jpg);
-		    	background-color: lightpink ;
-		    }
-		    body{			    		    	
-		    	padding-left:195px;
-		    	padding-top:8px ;
-		    }
-			#sroll{
-				position: relative;
-				border: 5px ridge ;
-				width: 960px;
-				height: 640px;		      
-			}
-			#sr1{
-				width: 100%;
-				height: 100%;
-				position: absolute;
-				left:0;
-				top: 0;
-				z-index: 0;
-			}
-			#sr2,#sr3,#sr4{
-				visibility: none;
-	            position: absolute;
-				left:0;
-				top: 0;
-			  height: 100%;
-			  width: 100%;
-			}
-			#sr2{
-				z-index: -2;
-			}
-			#sr3{
-				z-index: -3;
-			}
-			#sr4{
-				z-index: -4;
-			}
-			#guide{
-				width: 50px;
-				position: fixed;
-				left: 0px;
-				top: 75px;
-				z-index: 1;
-			}
-			.gus{				
-				width: 50px;
-				height: 40px;
-				margin-top:10px ;
-				/*border: 1px solid fuchsia;*/
-				border-radius: 4px;
-				background-color: deepskyblue;
-			}
-			.gus p{
-				text-align: center;
-				font-family: "新宋体";
-				font-size: 18px;
-				font-weight: bold;
-				margin-right:5px ;
-				height: 40px;
-				width: 50px;
-				line-height: 40px;
-				cursor: pointer;
-			}
-			.gus p a{
-				height: 40px;
-				color: white;
-				text-decoration: none;
-			}
-			#index{
-				width: 1370px;
-				height: 670px;
-				position: fixed;
-				left: 0;
-				top: 0;
-				z-index: 10;
-			}
-			#index img{
-				width: 100%;
-				height: 100%;				
-			}
-			#au{
-				position: fixed;
-				right: 0;
-				top: 0px;
-				z-index: 9;
-				display: none;
-			}
-			#au audio{
-				margin-bottom: 0;
-			}
-			#bgmusic{
-				position: fixed;
-				right: 60px;
-				top: 30px;
-				z-index: 9;
-			}
-			#bgmusic p{
-				color: blue;
-				font-weight: bold;
-				cursor: pointer;
-			}
-			
-            #l,#r{
-            	position: fixed;  
-            	top: 8px;  
-            	width: 100px;
-            	height: 640px;
-            	padding-top:270px ; 
-            	cursor: pointer; 
-            	z-index: 2;	
-            }
-            #l{
-            	
-            	left: 195px;
-            }
-            #r{
-            	left:1065px ;
-            }
-            #l img,#r img{
-            	width: 100px;
-            	height: 100px;
-            }
+
+body{background:url(../img/古典纹理027.jpg);color: white;}
+hide{display: none;}
+show{display: initial;}
+
+.comWidth{width: 994px;height: 194px;margin-left: auto;margin-right: auto;}
+.header{width: 100%;height: 100%;border: #66512C solid 5px;}
+.header img{width: 100%;height: 100%;}
+
+.nav_position{position: relative;top: -55px;width: 954px;left: 5px;}
+.navbar-inverse{opacity: 0.8;border: none;}
+.navbar-inverse .navbar-brand {color: #66512C;font-weight: bold;}
+.text ,.pictures,.about-btn{font-weight: bold;}
+.navbar-inverse .navbar-nav .text  a:focus{color: #66512C;}
+.navbar-inverse .navbar-nav .pictures a:focus, .navbar-inverse .navbar-nav .about-btn a:focus{color: #66512C;font-size: 14px;}
+
+.panel {background-color: #8A6D3B;}
+.panel-default .panel-heading{background-color: #FFEFBF;}
+
+.panel-title p{float: right;}
+.list a{font:18px "microsoft yahei", "微软雅黑" ;color: #000;text-decoration: none;position: relative;left: -270px;font-weight: bold;}
+.first{position: relative;left: -270px;}
+.add-border{border: #66512C solid 5px;}
+
+.about{width: 964px;height: 473px;border: #66512C solid 5px;position: relative;padding: 0;}
+.about img{width: 100%;height: 438px;margin-top: -20px;}
+.about h3{color: #000000;display: inline-block;position: absolute;font-weight: bold;color: #66512C;}
+.about h3.name{left: 50px;top: 90px;}
+.about h3.school{left:300px ;top: 90px;}
+.about h3.soft{left:550px ;top: 90px;}
+.about p{font-size: 20px;position: absolute;top: 200px;left: 120px;display: inline-block;width: 600px;text-align: center;color: #000;}
+.about h3.tel{left: 200px;top: 370px;color: #FFFF99;}
+.about img.myName{width: 200px;height: 80px;position: absolute;top: 300px;left: 590px;}

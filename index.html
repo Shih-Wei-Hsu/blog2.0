@@ -1,191 +1,105 @@
-﻿<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 	<head>
-		<meta charset="UTF-8">
-		<title>粒子效果</title>  
-		<style type="text/css">
-			#ai{width: 100%;height: 150px;
-				position: fixed;z-index: 99;top: 100px;text-align: center;font-size: 50px;color: #ff99ff;
-			}
-			#name{
-				width: 100%;height: 150px;
-				position: fixed;z-index: 99;bottom: 100px;text-align: center;font-size: 50px;color: #ff99ff;
-			}
-		</style>
-		<script src="js/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
-       <script src="js/lufylegend-1.8.8.min.js" type="text/javascript" charset="utf-8"></script>
-	</head>
-	<body onload="run1()">	
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
 		
-		<div id="legend" style="height:500px ;">
-			
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script type="text/javascript" src="js/jquery-2.0.3.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+		
+		<title>欢迎来到藏宝阁</title>
+	</head>
+	<body>
+		<div class="container comWidth">
+			<div class="header">
+				<img src="img/header.png"/>
+			</div>
+			<nav class="navbar navbar-inverse nav_position">
+                <div class="container-fuild">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">欢&nbsp;迎</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li class="text"><a href="#" onclick="showText()">原创文章</a></li>
+                        <li class="pictures"><a href="#">相&nbsp;册</a></li>
+                        <li class="about-btn"><a href="#"  onclick="showMe()">关于我</a></li>
+                    </ul>
+                </div>
+            </nav>
 		</div>
-	    <div id="ai">
-	    	<p>我们已经相爱<span class="year">&nbsp;</span>年<span class="month"></span>个月<span class="day"></span>天<span class="hour"></span>时<span class="minute"></span>分<span class="second"></span>秒</p>
-	    </div> 
-	    <div id="name">
-	    	<p>王&nbsp;呶&nbsp;呶</p>
+	    <div  class="fq-panel comWidth container">
+			<div class="panel-group add-border " id="accordion">
+				<div class="list">
+					<a href="#" >文章列表</a>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a  data-toggle="collapse" data-parent="#accordion" class="first" href="#collapse1">SSH框架开发</a>
+						    <p>2016-6-21</p>
+						</h4>
+					</div>
+					<div id="collapse1" class=" panel-collapse collapse in" >
+						<div class="panel-body">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commodo consequat.
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+                         <h4 class="panel-title">
+                             <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">前端开发</a>
+                             <p>2016-6-21</p>
+                         </h4>
+                    </div>
+                    <div id="collapse2" class="panel-collapse collapse">
+                         <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                         </div>
+				    </div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a  data-toggle="collapse" data-parent="#accordion" href="#collapse3">Bootstrap框架学习</a>
+						    <p>2016-6-21</p>
+						</h4>
+					</div>
+					<div id="collapse3" class="panel-collapse collapse" >
+						<div class="panel-body">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	    <div  class="about hide container comWidth">
+	    	<div class="list">
+					<a href="#" >认识下我</a>
+			</div>
+	    	<img src="img/80S58PIC2Kw_1024.jpg"/>
+	    	<h3 class="name">许世伟</h3>
+	    	<h3 class="school">太原理工大学</h3>
+	    	<h3 class="soft">软件学院</h3>
+	    	<p>对前端网页设计、web应用、移动端App设计、Logo设计等有接触、一定的认识。人生应当不断地去学习、积累知识！</p>
+	    	<img class="myName" src="img/4275.gif"/>
+	    	<h3 class="tel">联系方式  qq：465515386&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;email:465515386@qq.com</h3>
 	    </div>
-		<script type="text/javascript">
-              init(20,"legend",800,400,main);
-				
-				var backLayer;
-				var bitmapData;
-				var snowBack;
-				var lightBack;
-				var _snow = [];
-				var gravity = 0.15;
-				var drag = 0.6;
-				var loader;
-				var rect;
-				function main(){
-					
-					LGlobal.stageScale = LStageScaleMode.EXACT_FIT;  //一个 LStageScaleMode 类中指定要使用哪种缩放模式的值     EXACT_FIT [静态] 指定整个应用程序在指定区域中可见，但不尝试保持原始高宽比。
-					LSystem.screen(LStage.FULL_SCREEN);     // LSystem.screen(LStage.FULL_SCREEN);就可以实现全屏
-					
-					rect = new LRectangle(0,0,LGlobal.width,LGlobal.height); //LRectangle 对象是按其位置（由它左上角的点 (x, y) 确定）以及宽度和高度定义的区域。
-					var labelText = new LTextField();                    //LTextField对象显示文本信息
-					labelText.color = "#000000";
-					labelText.weight = "bolder";
-					labelText.text = getParameter("k");      
-					if(!labelText.text)labelText.text="I LOVE YOU!";
-					labelText.size = 20;
-					while(labelText.getWidth() < LGlobal.width -200 && labelText.getHeight() < LGlobal.height - 100){
-						labelText.size += 5;
-					}        //将lableText放大
-					
-					var w = labelText.getWidth()*1.1;
-					var h = labelText.size*1.5;
-					labelText.width = w;
-					labelText.setWordWrap(true,h);  //表示文本字段是否自动换行。如果设置的值为 true，则该文本字段自动换行；如果值为 false，则该文本字段不自动换行。默认值为 false。
-					labelText.x = (LGlobal.width - w)*0.5;  
-					labelText.y = (LGlobal.height - h)*0.5;
-					backLayer = new LSprite();      //LSprite 类是基本显示列表构造块：一个可显示图形并且也可包含子项的显示列表节点。层的概念					
-					addChild(backLayer);
-					backLayer.addChild(labelText);
-					
-					bitmapData = new LBitmapData("#000000",0,0,LGlobal.width,LGlobal.height,LBitmapData.DATA_CANVAS);
-					bitmapData.draw(backLayer);
-					
-					backLayer.removeChild(labelText);
-					
-					snowBack = new LBitmapData(null,0,0,LGlobal.width,LGlobal.height,LBitmapData.DATA_CANVAS);
-					var bitmap = new LBitmap(snowBack);
-					backLayer.addChild(bitmap);
-					
-					bitmapData.lock();
-					
-					backLayer.addEventListener(LEvent.ENTER_FRAME,run);
-					backLayer.addEventListener(LMouseEvent.MOUSE_UP,turn);
-					var fps = new FPS();
-					addChild(fps);
-				}
-				function turn (){
-					window.location.href = "xinxing.html";
-				}
-				function getParameter(key) {
-					var str = location.search.split("?");
-					if (str.length < 2) {
-						return "";
-					}
-					
-					var params = str[1].split("&");
-					for (var i = 0; i < params.length; i++) {
-						var keyVal = params[i].split("=");
-						if (keyVal[0] == key && keyVal.length == 2) {
-							return decodeURIComponent(keyVal[1]);
-						}
-					}
-					return "";
-				}
-				function run(){
-					var n = _snow.length, d;
-					snowBack.lock();
-					snowBack.setPixels(rect,0x00ccff);
-					while(n--){
-						var p = _snow[n];
-						p.vy += gravity * p.s;
-						p.y += p.vy;
-						if(checkPixel(p.x, p.y)){
-							p.y -= p.vy;
-							p.vy = 0;
-							p.y += 0.2;
-						}
-						snowBack.setPixel(p.x, p.y, 0xffffff);
-						if(p.y > LGlobal.height) {
-							_snow.splice(n, 1);
-						}
-					}
-					snowBack.unlock();
-					n = 10;
-					while(n--) {
-						particle(Math.random() * LGlobal.width, 0, Math.random() + 0.5);
-					}
-					
-				}
-				function particle(px,py,ps,pvx,pvy){
-					if(typeof ps == UNDEFINED)ps = 1;
-					if(typeof pvx == UNDEFINED)pvx = 0;
-					if(typeof pvy == UNDEFINED)pvy = 0;
-					
-					_snow.push({x:px,y:py,s:ps,vx:pvx,vy:pvy});
-				}
-				function checkPixel(x,y){
-					var pixel = bitmapData.getPixel(x,y);
-					for(var i=0;i<pixel.length;i++){
-						if(pixel[i])return true;
-					}
-					return false;
-				}
-				
-				var today = new Date(); 
-            var year=0,month=0,day=0,hour=0,minute=0,second=0;
-			
-			var i=0;
-			function run1(){
-				
-				if((today.getMonth()+1)>=7 && today.getDate()>=4){
-				      year = today.getYear()%100-13;
-				      month = today.getMonth()+1-7;
-				      day = today.getDate()-4;	
-				
-			    }else{
-				      year = today.getYear()%100-13-1; 
-				      month = 12-7+(today.getMonth()+1);
-				      day = today.getDate()-4;					
-		     	}
-			
-			     $(".year").html(year);
-			     $(".month").html(month);
-			     $(".day").html(day);
-			     hour = today.getHours();
-			     minute = today.getMinutes();
-			     second = today.getSeconds();
-			     $(".hour").html(hour);
-			     $(".minute").html(minute);
-			     $(".second").html(second);
-    
-			}
-			function time(){
-				second++;
-				
-				if(second>=60){
-					second=0;
-					minute++;
-				}
-				if(minute>=60){
-					minute=0;
-					hour++;
-				}
-				if(hour>=24){
-					hour=0;
-					day++;
-				}
-				$(".second").html(second);$(".minute").html(minute);$(".hour").html(hour);$(".day").html(day);
-				setTimeout("time()",1000);
-			}
-			time();
-		</script>
-          
+	    <script type="text/javascript">
+	    	function showText(){
+	    		$(".fq-panel").removeClass("hide");
+	    		$(".about").addClass("hide");
+	    	}
+	    	function showMe(){
+	    		$(".about").removeClass("hide");
+	    		$(".fq-panel").addClass("hide");
+	    	}
+	    </script>
 	</body>
 </html>

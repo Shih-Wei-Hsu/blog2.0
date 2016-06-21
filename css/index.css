@@ -1,14 +1,14 @@
-
 body{background:url(../img/古典纹理027.jpg);color: white;}
-hide{display: none;}
-show{display: initial;}
+.hide{display: none;}
+.show{display: initial;}
 
-.comWidth{width: 994px;height: 194px;margin-left: auto;margin-right: auto;}
-.header{width: 100%;height: 100%;border: #66512C solid 5px;}
-.header img{width: 100%;height: 100%;}
+.comWidth{width: 80%;margin-left: auto;margin-right: auto;}
+.myheader{width: 100%;height: 200px;border: #66512C solid 5px;}
+.myheader img{width: 100%;height: 100%;}
 
-.nav_position{position: relative;top: -55px;width: 954px;left: 5px;}
-.navbar-inverse{opacity: 0.8;border: none;}
+.navbar {margin-bottom: 0;}
+.nav_position{margin-top: -55px;width: 100%;}
+.navbar-inverse{opacity: 0.8;border-left:#66512C solid 5px;border-right:#66512C solid 5px;border-bottom: none;border-top: none;}
 .navbar-inverse .navbar-brand {color: #66512C;font-weight: bold;}
 .text ,.pictures,.about-btn{font-weight: bold;}
 .navbar-inverse .navbar-nav .text  a:focus{color: #66512C;}
@@ -16,18 +16,17 @@ show{display: initial;}
 
 .panel {background-color: #8A6D3B;}
 .panel-default .panel-heading{background-color: #FFEFBF;}
-
-.panel-title p{float: right;}
-.list a{font:18px "microsoft yahei", "微软雅黑" ;color: #000;text-decoration: none;position: relative;left: -270px;font-weight: bold;}
-.first{position: relative;left: -270px;}
+.panel-title p{float: right;margin-right: 20px;}
+.list a,.list1 a{font:18px "microsoft yahei", "微软雅黑" ;color: #000;text-decoration: none;font-weight: bold;margin-left: 30px;}
 .add-border{border: #66512C solid 5px;}
 
-.about{width: 964px;height: 473px;border: #66512C solid 5px;position: relative;padding: 0;}
-.about img{width: 100%;height: 438px;margin-top: -20px;}
+
+.about{width: 100%;height: 448px;border: #66512C solid 5px;position: relative;z-index: -10;}
+.about img{width: 100%;height: 438px;}
 .about h3{color: #000000;display: inline-block;position: absolute;font-weight: bold;color: #66512C;}
-.about h3.name{left: 50px;top: 90px;}
-.about h3.school{left:300px ;top: 90px;}
-.about h3.soft{left:550px ;top: 90px;}
-.about p{font-size: 20px;position: absolute;top: 200px;left: 120px;display: inline-block;width: 600px;text-align: center;color: #000;}
-.about h3.tel{left: 200px;top: 370px;color: #FFFF99;}
-.about img.myName{width: 200px;height: 80px;position: absolute;top: 300px;left: 590px;}
+.about .name{left: 50px;top: 90px;}
+.about .school{left:300px ;top: 90px;}
+.about .soft{left:550px ;top: 90px;}
+.about p.content{font-size: 20px;position: absolute;top: 200px;left: 120px;display: inline-block;width: 600px;text-align: center;color: #000;}
+.about .tel{left: 200px;top: 370px;color: #FFFF99;}
+.about img.myName{width: 200px;height: 80px;position: absolute;top: 280px;left: 600px;}

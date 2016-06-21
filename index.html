@@ -13,27 +13,37 @@
 	</head>
 	<body>
 		<div class="container comWidth">
-			<div class="header">
+			<div class="myheader">
 				<img src="img/header.png"/>
 			</div>
-			<nav class="navbar navbar-inverse nav_position">
+			<nav class="navbar navbar-inverse nav_position" role="navigation">
                 <div class="container-fuild">
                     <div class="navbar-header">
+                    	<button data-toggle="collapse" type="button" class="navbar-toggle" data-target="#myNavbar">
+					        <span class="icon-bar"></span>
+						    <span class="icon-bar"></span>
+					     	<span class="icon-bar"></span>
+					    </button>
                         <a class="navbar-brand" href="#">欢&nbsp;迎</a>
                     </div>
-                    <ul class="nav navbar-nav">
-                        <li class="text"><a href="#" onclick="showText()">原创文章</a></li>
-                        <li class="pictures"><a href="#">相&nbsp;册</a></li>
-                        <li class="about-btn"><a href="#"  onclick="showMe()">关于我</a></li>
-                    </ul>
+			        <div class="collapse navbar-collapse" id="myNavbar">
+			            <ul class="nav navbar-nav">
+                             <li class="text"><a href="#" onclick="showText()">原创文章</a></li>
+                             <li class="pictures"><a href="#">相&nbsp;册</a></li>
+                             <li class="about-btn"><a href="#"  onclick="showMe()">关于我</a></li>
+                        </ul>
+			        </div>
+                    
                 </div>
             </nav>
 		</div>
-	    <div  class="fq-panel comWidth container">
-			<div class="panel-group add-border " id="accordion">
-				<div class="list">
-					<a href="#" >文章列表</a>
-				</div>
+	   
+	    <div  class="fq-panel comWidth container">	  
+	    	<div class=" list">
+	    		<a href="#">文章列表</a>
+	    	    </div>
+			<div class="panel-group add-border" id="accordion">
+				
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">
@@ -79,25 +89,31 @@
 				</div>
 			</div>
 		</div>
-	    <div  class="about hide container comWidth">
-	    	<div class="list">
+	
+	    <div class="comWidth container">
+	    	<div class="list1 hide ">
 					<a href="#" >认识下我</a>
 			</div>
-	    	<img src="img/80S58PIC2Kw_1024.jpg"/>
-	    	<h3 class="name">许世伟</h3>
-	    	<h3 class="school">太原理工大学</h3>
-	    	<h3 class="soft">软件学院</h3>
-	    	<p>对前端网页设计、web应用、移动端App设计、Logo设计等有接触、一定的认识。人生应当不断地去学习、积累知识！</p>
+	    	<div  class="about hide">
+	    	
+	    	<img src="img/80S58PIC2Kw_1024.jpg"/> 
+           <h3 class="name">许世伟</h3>
+           <h3 class="soft">软件学院</h3>    	
+            <h3 class="school">太原理工大学</h3>	    		    		    		    	
+	    	<p class="content">对前端网页设计、web应用、移动端App设计、Logo设计等有接触、一定的认识。人生应当不断地去学习、积累知识！</p>
 	    	<img class="myName" src="img/4275.gif"/>
 	    	<h3 class="tel">联系方式  qq：465515386&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;email:465515386@qq.com</h3>
+	    </div>
 	    </div>
 	    <script type="text/javascript">
 	    	function showText(){
 	    		$(".fq-panel").removeClass("hide");
 	    		$(".about").addClass("hide");
+	    		$(".list1").addClass("hide");
 	    	}
 	    	function showMe(){
 	    		$(".about").removeClass("hide");
+	    		$(".list1").removeClass("hide");
 	    		$(".fq-panel").addClass("hide");
 	    	}
 	    </script>

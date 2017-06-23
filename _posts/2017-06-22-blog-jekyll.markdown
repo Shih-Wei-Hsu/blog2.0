@@ -9,5 +9,6 @@ categories: jekyll learn
 <style>
 h1:last-child{color:blue;}
 </style>
-
+{% highlight ruby %}
 <h1 title="">个人博客</h1>
+{% endhighlight %}

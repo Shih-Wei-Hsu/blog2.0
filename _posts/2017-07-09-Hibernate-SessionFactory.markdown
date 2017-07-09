@@ -3,6 +3,8 @@ layout: post
 title:  "Hibernate SessionFactory的创建方式"
 date:   2017-07-09 22:05:00 +0800
 categories: xsw java
+keywords: hibernate,sessionFactory
+description: "Hibernate SessionFactory的创建方式,包括hibernate3、4、5版本"
 ---
 ### 一. hibernate 3 创建 SessionFactory 的方式
 ```java    

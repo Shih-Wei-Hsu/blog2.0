@@ -1,0 +1,114 @@
+---
+layout: post
+title:  "hive、oracle、phoenix常用函数"
+date:   2017-07-10 16:00:00 +0800
+categories: xsw sql
+description: "SQL函数大全，对SQL函数的总结,包括hive、oracle、phoenix等sql常用函数"
+keywords: hive,oracle,phoenix,sql函数
+---
+### 字符函数
+
+#### UPPER 函数
+
+> 将文本字符串转换成字母全部大写形式
+
+|       oracle      |                hive               |        phoenix       |
+|      :-------:    |              :------:             |       :------:       |
+| upper（'coolszy'）|  upper(string A) ucase(string A)  | UPPER ( stringTerm ) |
+
+#### LOWER 函数
+
+> 将文本字符串转换成字母全部小写形式
+
+|       oracle      |                hive               |        phoenix       |
+|      :-------:    |              :------:             |       :------:       |
+| lower（'KUKA'）   |  lower(string A) lcase(string A)  | LOWER ( stringTerm ) |
+
+#### INITCAP 函数
+
+> 将每个单词的首字母大写，其他位置的字母小写
+
+|       oracle       |                hive               |        phoenix       |
+|      :-------:     |              :------:             |       :------:       |
+| initcap('kuKA aBc')|                                   |  |
+
+#### CONCAT 函数
+
+> 连接多个字符串，合并为一个字符串，可以接受任意数量的输入字符串
+
+|           oracle          |                hive               |        phoenix       |
+|         :-------:         |              :------:             |       :------:       |
+| concat（'Hello',' world'）|  concat(string A, string B…)      |                      |
+
+#### SUBSTR 函数
+
+> 从文本字符串中指定的位置指定长度的字符。                             
+
+|       oracle         |                                  hive                                         |                        phoenix                    |
+|      :-------:       |                                :------:                                       |                        :------:                   |
+| substr（'hello',2,3）| substr(string A, int start, int len) substring(string A, int start, int len)  | SUBSTR('[Hello]', 2, 5) SUBSTR('Hello World', -5) |
+
+#### UPPER 函数
+
+> 将文本字符串转换成字母全部大写形式
+
+|       oracle      |                hive               |        phoenix       |
+|      :-------:    |              :------:             |       :------:       |
+| upper（'coolszy'）|  upper(string A) ucase(string A)  | UPPER ( stringTerm ) |
+
+#### UPPER 函数
+
+> 将文本字符串转换成字母全部大写形式
+
+|       oracle      |                hive               |        phoenix       |
+|      :-------:    |              :------:             |       :------:       |
+| upper（'coolszy'）|  upper(string A) ucase(string A)  | UPPER ( stringTerm ) |
+
+#### UPPER 函数
+
+> 将文本字符串转换成字母全部大写形式
+
+|       oracle      |                hive               |        phoenix       |
+|      :-------:    |              :------:             |       :------:       |
+| upper（'coolszy'）|  upper(string A) ucase(string A)  | UPPER ( stringTerm ) |
+
+#### UPPER 函数
+
+> 将文本字符串转换成字母全部大写形式
+
+|       oracle      |                hive               |        phoenix       |
+|      :-------:    |              :------:             |       :------:       |
+| upper（'coolszy'）|  upper(string A) ucase(string A)  | UPPER ( stringTerm ) |
+
+#### UPPER 函数
+
+> 将文本字符串转换成字母全部大写形式
+
+|       oracle      |                hive               |        phoenix       |
+|      :-------:    |              :------:             |       :------:       |
+| upper（'coolszy'）|  upper(string A) ucase(string A)  | UPPER ( stringTerm ) |
+
+#### UPPER 函数
+
+> 将文本字符串转换成字母全部大写形式
+
+|       oracle      |                hive               |        phoenix       |
+|      :-------:    |              :------:             |       :------:       |
+| upper（'coolszy'）|  upper(string A) ucase(string A)  | UPPER ( stringTerm ) |
+
+#### UPPER 函数
+
+> 将文本字符串转换成字母全部大写形式
+
+|       oracle      |                hive               |        phoenix       |
+|      :-------:    |              :------:             |       :------:       |
+| upper（'coolszy'）|  upper(string A) ucase(string A)  | UPPER ( stringTerm ) |
+
+
+#### COALESCE 函数 
+
+#### CAST 函数
+
+#### REGEXP_REPLACE 函数
+
+

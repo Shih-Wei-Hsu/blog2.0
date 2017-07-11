@@ -27,8 +27,10 @@ github_username:  Shih-Wei-Hsu
 # Build settings
 markdown: kramdown
 theme: minima
-gems:
+#gems:
+plugins:
   - jekyll-feed
+#  - jekyll-sitemap
 permalink: /:year/:month/:title/
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

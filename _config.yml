@@ -29,7 +29,7 @@ markdown: kramdown
 theme: minima
 #gems:
 plugins:
-  - jekyll-feed
+  - jekyll-feed 
 #  - jekyll-sitemap
 permalink: /:year/:month/:title/
 # Exclude from processing.

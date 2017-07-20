@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "hadoop权威指南(一)之初始hadoop"
+title:  "hadoop权威指南(一)之初识hadoop"
 date:   2017-07-13 14:00:00 +0800
 categories: xsw hadoop
 description: "hadoop权威指南之初识hadoop"

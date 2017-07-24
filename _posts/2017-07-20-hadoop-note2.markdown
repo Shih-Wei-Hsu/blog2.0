@@ -2,7 +2,8 @@
 layout: post
 title:  "hadoop权威指南(二)之关于MapReduce"
 date:   2017-07-20 11:00:00 +0800
-categories: xsw hadoop MapReduce
+tag: xsw hadoop MapReduce
+category: 2017年7月
 description: "hadoop权威指南(二)之关于MapReduce"
 keywords: hadoop,MapReduce,hadoop权威指南
 ---
@@ -26,3 +27,9 @@ keywords: hadoop,MapReduce,hadoop权威指南
 
 ### map和reduce
 MapReduce任务过程分为两个阶段，每个阶段都以键值对作为输入和输出，其类型可任选，还需要写map函数和reduce函数。
+map函数的输出经由MapReduce框架处理后，最后发送到reduce函数。这个处理过程基于键来对键值对进行排序和分组。
+
+### Java MapReduce
+MapReduce程序需要实现map函数，reduce函数和运行程序作业的代码。map函数由Mapper类实现来表示，后者声明一个map()虚方法
+
+

@@ -2,7 +2,8 @@
 layout: post
 title:  "sqoop从oralce导入hive错误问题解决（日期格式转换）"
 date:   2017-07-13 19:00:00 +0800
-categories: xsw hadoop
+tag: xsw hadoop
+category: 2017年7月
 description: "sqoop从oralce导入hive错误问题解决（日期格式转换）"
 keywords: sqoop,hive,oracle,hadoop,sqoop导入
 ---

@@ -2,7 +2,8 @@
 layout: post
 title:  "PLSQL Developer 打开表后中文为??? 乱码问题解决"
 date:   2017-07-09 23:05:00 +0800
-categories: xsw sql
+tags: xsw sql
+category: 2017年7月
 description: "PLSQL Developer 打开表后中文为??? 乱码问题解决"
 keywords: plsql,乱码
 ---

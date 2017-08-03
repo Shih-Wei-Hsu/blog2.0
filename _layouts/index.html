@@ -12,9 +12,17 @@
   <meta name="baidu-site-verification" content="nH1L4gMioh" />
   <meta name="msvalidate.01" content="CD6E02DDCC8914B04C39924BB20D2164" />
   <meta name="360-site-verification" content="fc0c6af753d1c9aeee7cf24f7cc03d39" />
-  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/main.css"> 
   <link rel="canonical" href="http://localhost:4000/">
   <link rel="alternate" type="application/rss+xml" title="{{site.title}}" href="/feed.xml">
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/common.css"/>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<![endif]-->
   <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   <script>
     var _hmt = _hmt || [];
@@ -37,15 +45,15 @@
 
   <body>
 
-    <header class="site-header" role="banner">
+    <!--<header class="site-header" role="banner">-->
 
   <div class="wrapper">
     
     
-    <a class="site-title" href="/">{{site.title}}</a>
+    <!--<a class="site-title" href="/">{{site.title}}</a>-->
   
     
-      <nav class="site-nav">
+      <!--<nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">
@@ -58,33 +66,20 @@
         </label>
 
         <div class="trigger">
-          
-            
-            
-          
-            
-            
-            <a class="page-link" href="/about/">关于</a>
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
+            <a class="page-link" href="/about/">关于</a>  
         </div>
-      </nav>
+      </nav>-->
     
   </div>
 </header>
      {% include header.html %}
-
-
+     
+    <!--<h2>
+    	<a class="site-title" href="/">{{site.title}}</a>
+    </h2>-->
+    <hr />
     <main class="page-content" aria-label="Content">
+    	{% include left.html %}
       <div class="wrapper">
         <div class="home">
 

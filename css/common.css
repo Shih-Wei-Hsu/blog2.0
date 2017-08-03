@@ -1,0 +1,7 @@
+@font-face {
+	font-family:"blogTitle";
+	src: url(../fonts/titleFont.ttf) ;
+}
+ul.navbar-nav li:not(:first-child){
+	float: right;
+}

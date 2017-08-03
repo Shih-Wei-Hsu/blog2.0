@@ -1,27 +1,46 @@
 <header class="navbar navbar-inverse navbar-fixed-top docs-nav" role="banner">
-  <div class="container">
+  <div class="container-fluid">
     <div class="navbar-header">
       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="/" class="navbar-brand">
+      <!--<a href="/" class="navbar-brand">
         <img src="{{ '/styles/images/logo.jpg' | prepend: site.baseurl }}">
-      </a>
+      </a>-->
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-      <ul class="nav navbar-nav">    
+    	
+      <ul class="nav navbar-nav" style="width: 100%;">    
+      	<li>
+        	<!--<a class="site-title" href="{{ '/' | prepend: site.baseurl }}">{{site.title}}</a>-->
+        	<a class="active" style="color: white; font-size: 26px;font-family: 'blogTitle';" href="{{ '/' | prepend: site.baseurl }}">{{site.title}}</a>
+       </li>       
         <li>
-          <a href="{{ '/' | prepend: site.baseurl }}">Home</a>
+          <a  href="/about/">关于我们</a>
         </li>
         <li>
-          <a href="{{ '/categories/' | prepend: site.baseurl }}">大类分解</a>
+          <a  href="{{ '/everyday/' | prepend: site.baseurl }}">每日一语</a>
         </li>
         <li>
-          <a href="{{ '/tag' | prepend: site.baseurl }}">小类内聚</a>
+          <a  href="{{ '/logo' | prepend: site.baseurl }}">LOGO设计</a>
         </li>
+        <li>
+          <a  href="{{ '/coding/' | prepend: site.baseurl }}">CODING</a>
+        </li>
+        <li>
+          <a  href="{{ '/' | prepend: site.baseurl }}">HOME</a>
+        </li>
+        <!--<li>
+          <a  href="{{ '/categories/' | prepend: site.baseurl }}">大类分解</a>
+        </li>
+        <li>
+          <a  href="{{ '/tag' | prepend: site.baseurl }}">小类内聚</a>
+        </li>         -->
+        
       </ul>
+      	
     </nav>
   </div>
 </header>

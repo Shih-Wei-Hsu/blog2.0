@@ -3,14 +3,14 @@ layout: default
 title: 分类
 header: Posts By Category
 ---
+  <link rel="stylesheet" href="/assets/main.css"> 
   <link rel="stylesheet" href="../css/bootstrap.min.css" />
   <link rel="stylesheet" href="../css/common.css"/>
-  <link rel="stylesheet" href="/assets/main.css"> 
+  
 	<script src="../js/jquery-3.1.1.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
     
-<div class="wrapper" style="width: 100%;">
-	<div class="home" style="margin-top: 70px;">
+	<div class="home" style="margin-top: 70px;margin-left: -160px;">
 		<div class="container docs-container">
 			<div class="row">
 				<div class="col-md-3">
@@ -40,7 +40,7 @@ header: Posts By Category
 						<div class="wrapper">
 							<div class="home">
 								{% for category in site.categories %}
-								<h2 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h2>
+								<h2 id="{{ category[0] }}-ref" class="" >{{ category[0] | join: "/" }}</h2>
 								<ul>
 									{% assign pages_list = category[1] %} {% include LessOrMore/pages_list %}
 								</ul>
@@ -54,7 +54,6 @@ header: Posts By Category
 
 		<!--<p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>-->
 	</div>
-</div>
 
 
 

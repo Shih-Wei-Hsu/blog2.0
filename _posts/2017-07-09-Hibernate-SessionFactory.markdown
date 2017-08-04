@@ -7,6 +7,7 @@ category:  2017年7月
 keywords: hibernate,sessionFactory
 description: "Hibernate SessionFactory的创建方式,包括hibernate3、4、5版本"
 type: coding
+user: kevis
 ---
 ### 一. hibernate 3 创建 SessionFactory 的方式
 ```java    

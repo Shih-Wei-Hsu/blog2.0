@@ -6,6 +6,8 @@ tags: xsw sql
 category: 2017年7月
 description: "SQL函数大全，对SQL函数的总结,包括hive、oracle、phoenix等sql常用函数"
 keywords: hive,oracle,phoenix,sql函数
+type: coding
+user: kevis
 ---
 
 ### 一、字符函数

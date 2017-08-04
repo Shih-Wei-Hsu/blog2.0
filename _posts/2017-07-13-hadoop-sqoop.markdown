@@ -6,6 +6,8 @@ tag: xsw hadoop
 category: 2017年7月
 description: "sqoop从oralce导入hive错误问题解决（日期格式转换）"
 keywords: sqoop,hive,oracle,hadoop,sqoop导入
+type: coding
+user: kevis
 ---
 
 # sqoop从oralce导入hive错误问题解决（日期格式转换）

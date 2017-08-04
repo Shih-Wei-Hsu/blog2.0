@@ -6,6 +6,8 @@ tag: xsw hadoop MapReduce
 category: 2017年7月
 description: "hadoop权威指南(二)之关于MapReduce"
 keywords: hadoop,MapReduce,hadoop权威指南
+type: coding
+user: kevis
 ---
 
 ### 介绍：MapReduce是一种可用于数据处理的编程模型。hadoop可以运行各种语言版本的MapReduce程序。MapReduce是并行运行的，故优势在于处理大规模数据集。

@@ -6,6 +6,8 @@ tags: xsw note
 category: 2017年7月
 description: "新生活从头开始，毕业了，要为自己的人生计划，奋斗"
 keywords: 新生活,码农,计划
+type: coding
+user: kevis
 ---
 
 ### 新生活从头开始

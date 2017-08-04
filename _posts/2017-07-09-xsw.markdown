@@ -6,6 +6,8 @@ tags: xsw
 category: 2017年7月
 description: "许世伟自我介绍"
 keywords: xushiwei,许世伟,简介
+type: coding
+user: kevis
 ---
 ```
 本人许世伟，

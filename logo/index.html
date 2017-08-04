@@ -27,7 +27,19 @@ header: Posts By Tag
       <div class="panel docs-content">
         <div class="wrapper">
           <div class="home">
-
+           {% for post in site.posts %}
+          	{% if post["type"] == "logo" %}
+              <ol class="row" style="list-style: none;">
+          	  
+              
+                
+                  <li class="col-md-9"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+    	           	<li class="col-md-3" style="float:right;"><span>{{ post.user }} / {{ post.date | date: "%F" }}</span></li>   
+             
+              </ol>
+              {% endif %} 
+             {% endfor %}
+          
         
           </div>
         </div>

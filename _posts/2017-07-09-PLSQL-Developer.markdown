@@ -6,6 +6,8 @@ tags: xsw sql
 category: 2017年7月
 description: "PLSQL Developer 打开表后中文为??? 乱码问题解决"
 keywords: plsql,乱码
+type: coding
+user: kevis
 ---
 ### 问题描述: 
 ```

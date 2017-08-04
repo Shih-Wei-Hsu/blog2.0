@@ -6,6 +6,8 @@ tag: xsw hadoop
 category: 2017年7月
 description: "hadoop权威指南之初识hadoop"
 keywords: hadoop权威指南,数据,hadoop
+type: coding
+user: kevis
 ---
 
 # 初识hadoop

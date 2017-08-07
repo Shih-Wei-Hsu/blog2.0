@@ -1,7 +1,26 @@
 @font-face {
-	font-family:"blogTitle";
-	src: url(../fonts/titleFont.ttf) ;
+	font-family: "blogTitle";
+	src: url(../fonts/titleFont.ttf);
 }
-ul.navbar-nav li:not(:first-child){
+
+ul.navbar-nav li:not(:first-child) {
 	float: right;
+}
+
+table {
+	border-left: 1px solid #000000;
+	border-top: 1px solid #000000;
+	width: 100%;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+table th {
+	text-align: center;
+}
+
+table th,
+td {
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
 }

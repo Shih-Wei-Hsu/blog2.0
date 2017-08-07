@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  {% include head.html %} 
- <link rel="stylesheet" href="/assets/main.css">
+<head>
+  <link rel="stylesheet" href="/assets/main.css">
   <link rel="stylesheet" href="/css/bootstrap.min.css" />
   <link rel="stylesheet" href="/css/common.css"/>
 	<script src="/js/jquery-3.1.1.min.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
-  <body>
+</head>
+<body>
   	
   
-  
-    {% include header.html %}
+  {% include header.html %}
 
-   <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-      	<div class="home" style="margin-top: 70px;">
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <div class="home" style="margin-top: 70px;">
         <article class="post">
 
-  <div class="post-content">
+          <div class="post-content">
      
-     {{ page.content }} 
+           {{ page.content }} 
    
-  </div>
+          </div>
 
-</article>
-</div>
+        </article>
       </div>
-    </main>
+    </div>
+  </main>
+  
    {% include footer.html %}
 
-  </body>
+</body>
 
 </html>

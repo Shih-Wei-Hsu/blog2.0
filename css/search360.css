@@ -1,0 +1,38 @@
+#so360 {
+	white-space: nowrap
+}
+
+#so360 form {
+	margin: 0;
+	padding: 0
+}
+
+#so360_keyword {
+	width: 217px;
+	height: 30px;
+	line-height: 30px;
+	font: 14px arial;
+	padding: 2px 5px;
+	margin-right: 5px;
+	border: 2px solid #3FB30E;
+	outline: 0;
+	vertical-align: middle
+}
+
+#so360_keyword {
+	background: url(https://p.ssl.qhimg.com/t01ab1a3fb05f0ee893.png) no-repeat 236px center
+}
+
+#so360_submit {
+	width: 60px;
+	height: 30px;
+	border: 0;
+	color: #fff;
+	background: #3FB30E;
+	font-weight: bold;
+	font: bold 14px arial;
+	padding: 0;
+	padding-top: 3px\9;
+	cursor: pointer;
+	vertical-align: middle
+}

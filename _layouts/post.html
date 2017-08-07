@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,65 +15,53 @@
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="stylesheet" href="/css/bootstrap.min.css" />
   <link rel="stylesheet" href="/css/common.css"/>
+  <link rel="stylesheet" type="text/css" href="/css/search360.css"/>
 	<script src="/js/jquery-3.1.1.min.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 	
   <link rel="canonical" href="{{page.url}}">
   <link rel="alternate" type="application/rss+xml" title="{{site.title}}" href="/feed.xml">
-  <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?a67593acb45112d4d9822fb1b84c4469";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-  <script>
-(function(){
-   var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?190deac74d49b163b8cbbe35adf23ebe":"https://jspassport.ssl.qhimg.com/11.0.1.js?190deac74d49b163b8cbbe35adf23ebe";
-   document.write('<script src="' + src + '" id="sozz"><\/script>');
-})();
-</script>
-  {% include head.html %}
+  <script src="/js/baidu_hm.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/qihu.js" type="text/javascript" charset="utf-8"></script>
+  
 </head>
 
 
-  <body>
-     {% include header.html %}
-    
-    <hr>
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<body>
+  {% include header.html %}
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{page.title}}</h1>
-    <p class="post-meta">
-      <time datetime="{{ page.date }}" itemprop="datePublished">
+  <hr>
+  <main class="page-content" aria-label="Content">
+	  <div class="wrapper">
+		  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+			  <header class="post-header">
+			   	<h1 class="post-title" itemprop="name headline">{{page.title}}</h1>
+				  <p class="post-meta">
+				   	<time datetime="{{ page.date }}" itemprop="datePublished">
         
-        {{ page.date | date: "%b %d, %y" }}
-      </time>
-      </p>
-  </header>
+            {{ page.date | date: "%b %d, %y" }}
+            </time>
+			  	</p>
+			  </header>
 
-  <div class="post-content" itemprop="articleBody">
+			  <div class="post-content" itemprop="articleBody">
+
+			  	{{ page.content }}
+
+			  </div>
+
+		  </article>
+		  <!-- UY BEGIN -->
+		  <div id="uyan_frame"></div>
+		  <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2138707"></script>
+		  <!-- UY END -->
+	  </div>
+  </main>
   
-    {{ page.content }}
+  {% include search.html %}
 
-  </div>
+  {% include footer.html %}
 
-  
-</article>
-      <!-- UY BEGIN -->
-<div id="uyan_frame"></div>
-<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2138707"></script>
-<!-- UY END -->
-      </div>
-    </main>
-
-    {% include footer.html %}
-
-  </body>
+</body>
 
 </html>

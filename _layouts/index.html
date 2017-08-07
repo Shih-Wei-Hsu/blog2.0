@@ -90,6 +90,7 @@
 
   <ul class="post-list">
       {% for post in site.posts %}
+	  {% if post["type"] != "everyday" %}
       <li>
         
         <span class="post-meta">{{post.date | date: "%Y-%m-%d %H:%M"}}</span>
@@ -99,6 +100,7 @@
         </h2>
 		<!-- <p>{{ site.description }}</p>-->
       </li>
+	  {% endif %}
       {% endfor %}
     
   </ul>

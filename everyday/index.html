@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Tags
+title: everyday
 header: Posts By Tag
 ---
   <link rel="stylesheet" href="/assets/main.css">
@@ -18,15 +18,7 @@ header: Posts By Tag
         <div id="navigation">
         	<h1>目录</h1>
       		<ul class="nav sidenav">
-			  	{% if site.tags.first[0] == null %}
-				  	{% for tag in site.tags %} 
-				  	<li><a href="{{ site.JB.tags_path }}#{{ tag }}-ref">{{ tag }} <span >({{ site.tags[tag].size }})</span></a></li>
-				  	{% endfor %}
-				{% else %}
-				  	{% for tag in site.tags %} 
-				  	<li><a href="{{ site.JB.tags_path }}#{{ tag[0] }}-ref">{{ tag[0] }} <span style="color: #999999;" >({{ tag[1].size }})</span></a></li>
-				  	{% endfor %}
-				{% endif %}
+			  	
           	</ul>
         </div>
       </div>
@@ -35,15 +27,20 @@ header: Posts By Tag
       <div class="panel docs-content">
         <div class="wrapper">
           <div class="home">
-
-          	{% for tag in site.tags %} 
-			  <h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
-			  <ul>
-			    {% assign pages_list = tag[1] %}  
-			    {% include LessOrMore/pages_list %}
-			  </ul>
-			{% endfor %}
-
+           {% for post in site.posts %}
+          	{% if post["type"] == "everyday" %}
+              <ol class="row" style="list-style: none;">
+          	  
+                  
+                
+                 <li class="col-md-9"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+    	           	<li class="col-md-3" style="float:right;"><span>{{ post.user }} / {{ post.date | date: "%F" }}</span></li>   
+             
+              </ol>
+              {% endif %} 
+             {% endfor %}
+          
+        
           </div>
         </div>
       </div>

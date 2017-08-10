@@ -1,42 +1,48 @@
 ---
 layout: post
-title:  "如何修改linux的启动级别"
-date:   2017-08-10 21:00:00 +0800
+title:  "shell并行执行hiveSQL脚本"
+date:   2017-08-11 00:10:00 +0800
 tag: xsw note
 category: 2017年8月
-description: "如何修改linux的启动级别"
-keywords: linux,启动级别
+description: "shell并行执行hiveSQL脚本"
+keywords: hive,shell并行,hive传参,shell传参,linux,hadoop
 type: coding
 user: kevis
 ---
 
-### linux下有一下启动级别：
+#### 假设有多个SQL脚本，test.sql为其中之一：
 
 ```
-# 0 - halt (Do NOT set initdefault to this) 
-# 1 - Single user mode 
-# 2 - Multiuser, without NFS (The same as 3, if you do not have networking) 
-# 3 - Full multiuser mode 
-# 4 - unused 
-# 5 - X11 
-# 6 - reboot (Do NOT set initdefault to this)
+insert overwrite table test1
+select
+name,
+birthday,
+'${hiveconf:day}'
+from test2 ;
 ```
 
-```
-0：停机(不要设置为启动默认级别)
-1：单用户模式
-2：多用户，无NFS(如果您没有配置网络，该级别与3一样)
-3：完全多用户模式
-4：不使用
-5：X11图形模式
-6：重启(不要设置为启动默认级别)
-```
-
-要修改启动级别，需进入到/etc目录下，然后vi inittab进行修改；
+'${hiveconf:day}' 指 hive -f file(某个sql文件)命令执行时通过 -hiveconf 定义传递的参数 day。其shell如下：
 
 ```
-id:5:initdefault:
-......
+#!/bin/bash
+
+for file in *.sql
+do
+   hive -hiveconf day=$1 -f $file &
+done
+
 ```
 
-如果想让系统不用图形模式登陆可将id:5:initdefault: 中的5改为3即可，保存退出。
+shell脚本中 for 循环遍历linux当前文件夹下所有的sql文件，执行 hive -f 命令，并将shell的运行时参数 $1 传递给hive命令，继而通过参数 day 赋给 sql中。 
+
+```
+& linux 设置此进程为后台进程(实现并行)
+```
+
+执行 shell 命令：
+
+```
+./test.sh 2017-08-11
+```
+
+

@@ -2,7 +2,7 @@
 layout: post
 title:  "hadoop权威指南(二)之关于MapReduce"
 date:   2017-07-20 11:00:00 +0800
-tag: xsw hadoop MapReduce
+tag: hadoop
 category: 2017年7月
 description: "hadoop权威指南(二)之关于MapReduce"
 keywords: hadoop,MapReduce,hadoop权威指南

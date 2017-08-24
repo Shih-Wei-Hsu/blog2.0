@@ -2,7 +2,7 @@
 layout: post
 title:  "hadoop权威指南(一)之初识hadoop"
 date:   2017-07-13 14:00:00 +0800
-tag: xsw hadoop
+tag: hadoop
 category: 2017年7月
 description: "hadoop权威指南之初识hadoop"
 keywords: hadoop权威指南,数据,hadoop

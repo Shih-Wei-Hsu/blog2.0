@@ -2,7 +2,7 @@
 layout: post
 title:  "如何修改linux的启动级别"
 date:   2017-08-10 21:00:00 +0800
-tag: xsw note
+tag: linux
 category: 2017年8月
 description: "如何修改linux的启动级别"
 keywords: linux,启动级别

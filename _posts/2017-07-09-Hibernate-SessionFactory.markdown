@@ -2,7 +2,7 @@
 layout: post
 title:  "Hibernate SessionFactory的创建方式"
 date:   2017-07-09 22:05:00 +0800
-tags:  xsw java
+tags:  hibernate
 category:  2017年7月
 keywords: hibernate,sessionFactory
 description: "Hibernate SessionFactory的创建方式,包括hibernate3、4、5版本"

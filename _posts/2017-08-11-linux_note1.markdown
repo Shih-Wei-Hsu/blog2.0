@@ -2,7 +2,7 @@
 layout: post
 title:  "shell并行执行hiveSQL脚本"
 date:   2017-08-11 00:10:00 +0800
-tag: xsw note
+tag: shell
 category: 2017年8月
 description: "shell并行执行hiveSQL脚本"
 keywords: hive,shell并行,hive传参,shell传参,linux,hadoop

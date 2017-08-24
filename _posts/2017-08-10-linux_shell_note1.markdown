@@ -2,7 +2,7 @@
 layout: post
 title:  "Linux Shell的 & 、&& 、 ||笔记"
 date:   2017-08-10 11:00:00 +0800
-tag: xsw note
+tag: shell
 category: 2017年8月
 description: "Linux Shell的 & 、&& 、 ||笔记"
 keywords: linux,shell,&,&&,||

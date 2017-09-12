@@ -1,0 +1,36 @@
+---
+layout: post
+title:  "shell执行出错 /bin/bash^M: bad interpreter: No such file or directory"
+date:   2017-09-09 00:10:00 +0800
+tag: shell
+category: 2017年9月
+description: "shell 执行出错 /bin/bash^M: bad interpreter: No such file or directory"
+keywords: shell,/bin/bash^M
+type: coding
+user: kevis
+---
+
+#### 执行shell脚本时报错
+<br>
+![shell-bash-error](/images/basherr.png)
+
+<br>
+
+错误原因之一：
+脚本文件是DOS格式的, 即每一行的行尾以\r\n来标识，而文件执行需要unix格式。
+
+<br>
+解决方法：
+```
+查看脚本文件格式：
+vi 文件名
+:set ff  回车
+```
+
+```
+修改文件格式：
+:set ff=unix
+保存，再次执行ok
+```
+
+

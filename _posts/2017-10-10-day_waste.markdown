@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "你以为你在合群，其实你在浪费青春。"
+date:   2017-10-10 11:00:00 +0800
+
+description: "你以为你在合群，其实你在浪费青春。"
+keywords: waste
+type: everyday
+user: kevis
+---
+你以为你在合群，其实你在浪费青春。
+

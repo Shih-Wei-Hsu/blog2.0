@@ -2,7 +2,7 @@
 layout: post
 title:  "HBuilder开发python环境搭建"
 date:   2017-10-16 16:00:00 +0800
-tags: python,HBuilder
+tag: python
 category: 2017年10月
 description: "HBuilder开发python环境搭建"
 keywords: python,HBuilder,环境搭建

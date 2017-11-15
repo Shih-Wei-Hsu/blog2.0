@@ -73,5 +73,6 @@ apache http server：[https://httpd.apache.org/docs/current/platform/windows.htm
 ```
     1.在httpd.conf中可以指定服务主页面,DirectoryIndex index.html
     2.如果仅仅想开放自己某个文件夹,可以在CMD中使用 python -m http.server 9000 命令开启服务,他人就可通过http://yourhost:9000访问到你的目录
-
+    3.python cgi文件头部第一行解释器的路径一定要写对，尤其要注意 ！号，必须是英文字符，不然报错：AH01222: don't know how to spawn child process
+    4.卸载Apache24服务，必须用管理员身份打开CMD,在bin目录下，执行httpd.exe -k uninstall –n “Apache24” 命令卸载服务
 ```

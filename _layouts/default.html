@@ -44,40 +44,7 @@
       <div class="wrapper">
         <div class="home">
             <h1 class="page-heading">文章</h1>
-            <ul class="post-list">
-              {% for post in site.posts %}
-	              {% if post["type"] != "everyday" %}
-                  <li>
-        
-                  <!--  <span class="post-meta">{{post.date | date: "%Y-%m-%d %H:%M"}}</span>-->
-
-                    <h2>
-                      <a class="post-link" href="{{post.url}}">{{post.title}}</a>
-                    </h2>
-		                <!--<p>{{ post.description }}</p>-->
-		                <p >{{ post.content | strip_html | strip_newlines | truncate: 250 }}&hellip;</p>
-		                <div style="">        
-                      <time datetime="{{post.date | date: date_to_xmlschema}}" class="" style="float: left;">
-                        <img src="/images/calendar.png" width="20px" /> 
-                          {{ post.date | date: "%F"}}
-                      </time> 
-                      <div class = "" style="float: left;margin-left: 15px;">
-                         <img src="/images/tag-icon.svg" width="20px" /> 
-                      </div>
-                      <a href="/tag" style="float: left;">
-                         <div class = "" style="float: left;margin-left: 5px;">
-                         <span class="">{{ post.tags }}</span>
-                         </div>
-                         <div class = "" style="float: right;"> 
-                          <a class="" href={{ post.url }}>阅读全文 » 
-                      </a>
-                      </div>
-                      </div>
-                      <div style=" clear:both"></div>
-                  </li>
-	              {% endif %}
-              {% endfor %}    
-            </ul>
+            {{ content }}
 
             <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
 

@@ -31,10 +31,11 @@ theme: minima
 #gems:
 plugins:
   - jekyll-feed 
+  - jekyll-paginate
 #  - jekyll-sitemap
 permalink: /:year/:month/:title/
 paginate: 6
-paginate_path: "page:num"
+paginate_path: "page/:num/"
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

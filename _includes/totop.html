@@ -1,3 +1,10 @@
-<div id="totop">
-	<p><a class="glyphicon glyphicon-plane" href="#top" ></a></p>
+<div id="totop" style="margin-bottom:15px ;">
+	<p><a href="javascript:void(0)" ><img src="/images/top.png"/></a></p>
 </div>
+<script type="text/javascript">
+	$(function(){
+		$("#totop").click(function(){
+			$('html,body').animate({scrollTop: '0px'}, 600);
+		});
+	});
+</script>

@@ -1,3 +1,6 @@
+---
+layout: default
+---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +48,7 @@
         <div class="home">
             <h1 class="page-heading">文章</h1>
             <ul class="post-list">
-              {% for post in site.posts %}
+              {% for post in paginator.posts %}
 	              {% if post["type"] != "everyday" %}
                   <li>
         
@@ -78,7 +81,13 @@
 	              {% endif %}
               {% endfor %}    
             </ul>
-
+            {% if paginator.previous_page %}
+        <a class="newer-posts pagination__newer btn btn-small btn-tertiary" href="{{ paginator.previous_page_path }}#blog">&larr; 最近</a>
+    {% endif %}
+    <span class="pagination__page-number">{{ paginator.page }} / {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}
+        <a class="older-posts pagination__older btn btn-small btn-tertiary" href="{{ paginator.next_page_path }}#blog">更早 &rarr;</a>
+    {% endif %}
             <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
 
         </div>
@@ -92,3 +101,9 @@
   </body>
 
 </html>
+
+
+
+		
+
+	

@@ -8,6 +8,8 @@ header: Posts By Tag
   <link rel="stylesheet" href="../css/common.css"/>
 	<script src="../js/jquery-3.1.1.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
  <div class="wrapper">
         <div class="home" style="margin-top: 70px;margin-left: -160px;">
 
@@ -40,7 +42,7 @@ header: Posts By Tag
 			  <h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
 			  <ul>
 			    {% assign pages_list = tag[1] %}  
-			    {% include LessOrMore/pages_list %}
+			    {% include xushiwei/pages_list %}
 			  </ul>
 			{% endfor %}
 

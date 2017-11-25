@@ -48,7 +48,7 @@ header: Posts By Category
 								{% for category in sortCategory %}
 								<h2 id="{{ category[0] }}-ref" class="" >{{ category[0] | join: "/" }}</h2>
 								<ul>
-									{% assign pages_list = category[1] %} {% include LessOrMore/pages_list %}
+									{% assign pages_list = category[1] %} {% include xushiwei/pages_list %}
 								</ul>
 								{% endfor %}
 							</div>

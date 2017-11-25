@@ -19,11 +19,12 @@
   <link rel="stylesheet" type="text/css" href="/css/search360.css"/>
 	<script src="/js/jquery-3.1.1.min.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
-	
+	<script src="/js/jquery-tapir.min.js" type="text/javascript" charset="utf-8"></script>
   <link rel="canonical" href="{{page.url}}">
   <link rel="alternate" type="application/rss+xml" title="{{site.title}}" href="/feed.xml">
   <script src="/js/baidu_hm.js" type="text/javascript" charset="utf-8"></script>
   <script src="/js/qihu.js" type="text/javascript" charset="utf-8"></script>
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   
 </head>
 
@@ -37,10 +38,12 @@
 			  <header class="post-header">
 			   	<h1 class="post-title" itemprop="name headline">{{page.title}}</h1>
 				  <p class="post-meta">
+				  	<img src="/images/calendar.png" width="20px"/>
 				   	<time datetime="{{ page.date }}" itemprop="datePublished">
         
             {{ page.date | date: "%b %d, %y" }}
             </time>
+            <a style="float: right;font-color:black;" href="javascript:void(0)" onclick="javascript:history.back(-1)">返回</a>
 			  	</p>
 			  </header>
 
@@ -51,16 +54,33 @@
 			  </div>
 
 		  </article>
+		  
+		  <ul class="pager">
+        {% if page.previous.url %}
+        <li class="previous">
+            <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">上一篇：  <span>{{page.previous.title}}</span>
+            </a>
+        </li>
+        {% endif %}
+        {% if page.next.url %}
+        <li class="next">
+            <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">下一篇：  <span>{{page.next.title}}</span>
+            </a>
+        </li>
+        {% endif %}
+   </ul>
 		  <!-- UY BEGIN -->
 		  <div id="uyan_frame"></div>
 		  <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2138707"></script>
 		  <!-- UY END -->
 	  </div>
+	  
   </main>
   
-  {% include search.html %}
+  {% include search360.html %}
   <!--{% include totop.html %}-->
-  {% include footer.html %}
+  {% include post_footer.html %}
+  {% include totop.html %}
   <div class="ad" style="position: fixed;top: 96px;left: 0;">
   	  <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="200" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=xswwj-20&marketplace=amazon&region=US&placement=0887276407&asins=0887276407&linkId=50c416b2004d69193422cc74778b18d7&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
   	  </iframe>
@@ -69,6 +89,7 @@
     </iframe>
   	
   </div>
+
 </body>
 
 </html>

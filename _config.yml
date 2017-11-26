@@ -47,3 +47,4 @@ paginate_path: "page/:num/"
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+production_url : http://blog.xushiwei.top

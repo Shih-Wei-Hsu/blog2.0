@@ -78,17 +78,36 @@
   </main>
   
   {% include search360.html %}
-  <!--{% include totop.html %}-->
   {% include post_footer.html %}
   {% include totop.html %}
-  <div class="ad" style="position: fixed;top: 96px;left: 0;">
-  	  <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="200" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=xswwj-20&marketplace=amazon&region=US&placement=0887276407&asins=0887276407&linkId=50c416b2004d69193422cc74778b18d7&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
-  	  </iframe>
-  	  <br>
-  	  <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_br_asin_til&ad_type=product_link&tracking_id=xswwj-20&marketplace=amazon&region=US&placement=0262035618&asins=0262035618&linkId=fd92101c07e839aad2932d9d697c5c7d&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
-    </iframe>
+  <script type="text/javascript">
+    function browserRedirect() {
+      var sUserAgent = navigator.userAgent.toLowerCase();
+      var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+      var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+      var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+      var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+      var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+      var bIsAndroid = sUserAgent.match(/android/i) == "android";
+      var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+      var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+      if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+        document.writeln("");
+      } else {
+        document.writeln('<div class="ad" style="position: fixed;top: 96px;left: 0;">'+
+  	            '<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="200" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=xswwj-20&marketplace=amazon&region=US&placement=0887276407&asins=0887276407&linkId=50c416b2004d69193422cc74778b18d7&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">'
+  	           +'</iframe>'
+  	           +'<br>'
+  	           +'<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_br_asin_til&ad_type=product_link&tracking_id=xswwj-20&marketplace=amazon&region=US&placement=0262035618&asins=0262035618&linkId=fd92101c07e839aad2932d9d697c5c7d&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">'
+               +'</iframe>'
   	
-  </div>
+               +'</div>');
+      }
+    }
+
+    browserRedirect();
+  </script>
+  
 
 </body>
 

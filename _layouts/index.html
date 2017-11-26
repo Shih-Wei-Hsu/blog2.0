@@ -39,8 +39,28 @@
     	<a class="site-title" href="/">{{ site.title }}</a>
     </h2>--> 
     <hr />
+    <script type="text/javascript">
+    function browserRedirect() {
+      var sUserAgent = navigator.userAgent.toLowerCase();
+      var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+      var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+      var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+      var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+      var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+      var bIsAndroid = sUserAgent.match(/android/i) == "android";
+      var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+      var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+      if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+        document.writeln("");
+      } else {
+        document.writeln('{% include left.html %}');
+      }
+    }
+
+    browserRedirect();
+  </script>
     <main class="page-content" aria-label="Content">
-    	{% include left.html %}
+    	
       <div class="wrapper">
         <div class="home">
             <h1 class="page-heading">文章</h1>

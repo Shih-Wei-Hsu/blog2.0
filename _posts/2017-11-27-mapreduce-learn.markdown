@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "大数据技术原理与应用之MapReduce(一)"
+title:  "大数据技术原理与应用之MapReduce"
 date:   2017-11-27 16:00:00 +0800
 tag: MapReduce
 category: 2017年11月
-description: "大数据技术原理与应用之MapReduce(一),包括概述和工作流程"
+description: "大数据技术原理与应用之MapReduce,包括概述和工作流程"
 keywords: MapReduce,Map,Reduce,Hadoop
 type: coding
 user: kevis

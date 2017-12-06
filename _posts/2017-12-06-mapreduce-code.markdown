@@ -124,7 +124,17 @@ public class WordCount {
     输入文件与输出文件可以是本地文件也可以是集群上的文件， 比如本地输入文件（D：/input），集群输入文件（hdfs://192.168.182.128:8020/input）。
 ```
 
+### windows平台hadoop环境配置
+
+下载windows平台运行hadoop需要的库[hadoop-common-2.7.1-bin](https://github.com/SweetInk/hadoop-common-2.7.1-bin)。然后将winutils.exe,libwinutils.lib拷贝到本地hadoop的bin目录下，将hadoop.dll拷贝到c:\windows\system32目录中。
+
+
 ### 执行报错
 
+```
+错误信息：(null) entry incommand string: null chmod 0700
+解决：确保将winutils.exe,libwinutils.lib拷贝到本地hadoop的bin目录下，hadoop.dll拷贝到c:\windows\system32目录中。
+```
+  
 
 

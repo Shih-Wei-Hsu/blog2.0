@@ -134,6 +134,10 @@ public class WordCount {
 ```
 错误信息：(null) entry incommand string: null chmod 0700
 解决：确保将winutils.exe,libwinutils.lib拷贝到本地hadoop的bin目录下，hadoop.dll拷贝到c:\windows\system32目录中。
+错误情况：eclipse打开hdfs文件显示 could not obtain block
+解决：虚拟机关闭防火墙
+错误情况：mapReduce程序结果输出文件无内容
+解决：确保eclipse Map/Reduce Locations->Edit Hadoop Location-> Advanced parameters 中 各参数 ip 为集群对应节点ip。集群中hadoop的配置文件将hostname、localhost、0.0.0.0也换成IP。重启集群与eclipse，执行M/R程序。 
 ```
   
 

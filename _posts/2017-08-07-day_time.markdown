@@ -2,7 +2,7 @@
 layout: post
 title:  "光阴易逝，岂容我待"
 date:   2017-08-07 11:00:00 +0800
-tag:life
+tag: life
 description: "光阴易逝，岂容我待"
 keywords: time
 type: everyday

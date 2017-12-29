@@ -9,7 +9,11 @@
 		<input type="text" name="query" id="query" placeholder="Please enter the title" value=""/>
 		<a href="javascript:void(0)" id="searchButton" >SEARCH</a>
 		<br />
-		<p id="result"></p>
+		<div id="result">
+			
+			<p id="count"></p>
+			<p id="firstTitle"></p>
+		</div>
 		<script type="text/javascript">
 			$(function(){
 				$("#searchButton").click(function(){
@@ -19,7 +23,8 @@
 						asyn:true,
 						dataType:'json',
 						success:function (data){
-							$("#result").text(data.get(0).title)
+							$("#result #count").text(data.totalItems);
+							$("#result #firstTitle").text(data.items[0].title)
 						}
 					});
 				});

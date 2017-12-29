@@ -14,7 +14,7 @@
 			$(function(){
 				$("#searchButton").click(function(){
 					$.ajax({
-						type:"post",
+						type:"get",
 						url:"https://www.googleapis.com/books/v1/volumes?q="+$('#query').val(),
 						asyn:true,
 						dataType:'json',
